@@ -44,15 +44,20 @@ def prueba4 (**kwargs):
 
 prueba4(**sandricito)
 
+print('-'*15)
+
 import os
 import csv
 ruta = os.path.dirname(os.path.realpath("."))
-ruta_archivo = os.path.join(ruta,"HP", "Documents", "Informatica","Python","Practica","netflix_titles.csv")
+ruta_archivo = os.path.join(ruta,"netflix_titles.csv")
+
 
 archivo = open(ruta_archivo, "r")
 csvreader = csv.reader(archivo, delimiter=',')
+print(type(csvreader))
 
 encabezado = next(csvreader)
+print(type(encabezado))
 print(encabezado)
 archivo.close()
 
