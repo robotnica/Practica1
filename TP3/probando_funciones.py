@@ -51,3 +51,14 @@ prueba4(**sandricito)
 
 print('-'*15)
 
+texto = """ Wise man say only fools rush in """
+
+def procesar_cadena(cadena):
+    lista = cadena.split()
+    lista = sorted(lista,key = lambda palabra: palabra.lower())
+    print(lista)
+
+if __name__ == "__main__":
+    procesar_cadena(texto)
+
+
